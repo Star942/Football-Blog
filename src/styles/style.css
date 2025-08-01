@@ -1,0 +1,150 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    margin: 0;
+    color: #22223b;
+}
+
+header {
+    background: linear-gradient(90deg, #4f8cff 0%, #6c63ff 100%);
+    color: #fff;
+    padding: 2em 0 1em 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(76,99,255,0.08);
+}
+
+header h1 {
+    margin: 0 0 0.5em 0;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.2s;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: #ffd166;
+    border-bottom: 2px solid #ffd166;
+}
+
+main {
+    max-width: 700px;
+    margin: 2em auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(76,99,255,0.08);
+    padding: 2em;
+}
+
+article {
+    background: #e0e7ff;
+    border-radius: 10px;
+    padding: 1em 1.5em;
+    margin-bottom: 1.5em;
+    box-shadow: 0 2px 8px rgba(76,99,255,0.05);
+}
+
+article h3 a {
+    color: #4f8cff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+article h3 a:hover {
+    color: #22223b;
+    text-decoration: underline;
+}
+
+footer {
+    background: #4f8cff;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+
+footer a {
+    color: #ffd166;
+    text-decoration: none;
+    transition: text-decoration 0.2s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1.2em;
+    justify-content: center;
+    margin: 1.5em 0;
+}
+
+.nav-buttons button {
+    background: linear-gradient(90deg, #4f8cff 0%, #6c63ff 100%);
+    color: #fff;
+    border: none;
+    padding: 0.8em 2.2em;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(76,99,255,0.15);
+    transition: 
+        background 0.3s,
+        color 0.2s,
+        transform 0.15s,
+        box-shadow 0.2s;
+    letter-spacing: 1px;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-buttons button:hover {
+    background: linear-gradient(90deg, #ffd166 0%, #ff8c66 100%);
+    color: #22223b;
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(255,209,102,0.18);
+}
+
+.nav-buttons button:active::after {
+    width: 200%;
+    height: 200%;
+}
+
+/* Add these styles at the end of your CSS file */
+
+.parallax-bg {
+    background-image: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80');
+    min-height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+
+.parallax-bg::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(40, 48, 72, 0.45); /* dark overlay for readability */
+    z-index: 1;
+}
